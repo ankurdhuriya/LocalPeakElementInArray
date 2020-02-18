@@ -40,6 +40,8 @@ class MyTestCase(unittest.TestCase):
     def test_four_element_array_with_first_element_as_peak(self):
         self.assertEqual(4, find_peak([4, 3, 2, 1]))
 
+    def test_four_element_array_with_second_element_as_peak(self):
+        self.assertEqual(4, find_peak([3, 4, 2, 1]))
 
 
 if __name__ == '__main__':
