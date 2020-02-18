@@ -2,14 +2,15 @@ import unittest
 
 
 def find_peak(arr):
+    peak = None
     if len(arr) == 1:
-        return arr[0]
+        peak = arr[0]
     if len(arr) > 1:
         if arr[0] > arr[1]:
-            return arr[0]
+            peak = arr[0]
         if arr[0] < arr[1]:
-            return arr[1]
-    return None
+            peak = arr[1]
+    return peak
 
 
 class MyTestCase(unittest.TestCase):
