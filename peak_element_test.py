@@ -5,11 +5,18 @@ def find_peak(arr):
     peak = None
     if len(arr) == 1:
         peak = arr[0]
-    if len(arr) > 1:
+    if len(arr) == 2:
         if arr[0] > arr[1]:
             peak = arr[0]
         if arr[0] < arr[1]:
             peak = arr[1]
+    if len(arr) == 3:
+        if arr[0] > arr[1]:
+            peak = arr[0]
+        if arr[0] < arr[1]:
+            peak = arr[1]
+        if arr[1] < arr[2]:
+            peak = arr[2]
     return peak
 
 
@@ -31,6 +38,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_three_element_array_with_middle_element_as_peak(self):
         self.assertEqual(3, find_peak([1, 3, 2]))
+
+    def test_three_element_array_with_right_element_as_peak(self):
+        self.assertEqual(3, find_peak([1, 2, 3]))
 
 
 if __name__ == '__main__':
